@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Tooltip?>
+
+<VBox fx:controller="com.github.fanfever.repayment.Action" prefHeight="721.0"
+	prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:id="vbox">
+	<children>
+		<MenuBar prefHeight="26.0" prefWidth="929.0" VBox.vgrow="NEVER">
+			<Menu mnemonicParsing="false" text="文件">
+				<items>
+					<MenuItem mnemonicParsing="false" onAction="#onMenuExit"
+						text="退出" />
+				</items>
+			</Menu>
+			<menus>
+				<Menu mnemonicParsing="false" text="帮助">
+					<items>
+						<MenuItem mnemonicParsing="false" text="关于还款计算器"
+							onAction="#onAboutAction" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+		<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="375.0"
+			prefWidth="943.0" VBox.vgrow="ALWAYS">
+			<children>
+				<Label alignment="CENTER" layoutX="155.0" layoutY="177.0"
+					style="&#10;" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+					<font>
+						<Font size="18.0" />
+					</font>
+				</Label>
+				<Button layoutX="451.0" layoutY="125.0" mnemonicParsing="false"
+					prefHeight="23.0" prefWidth="73.0" text="生成" onAction="#submit" />
+				<TableView layoutX="14.0" layoutY="244.0" prefHeight="439.0"
+					prefWidth="999.0" fx:id="tableView">
+					<columns>
+						<TableColumn prefWidth="99.9" text="期数" />
+						<TableColumn prefWidth="99.9" text="线下还款本金" />
+						<TableColumn prefWidth="99.9" text="线下还款利息" />
+						<TableColumn prefWidth="99.9" text="线下还款本息" />
+						<TableColumn prefWidth="99.9" text="线上还款本金" />
+						<TableColumn prefWidth="99.9" text="线上还款利息" />
+						<TableColumn prefWidth="99.9" text="线上还款本息" />
+						<TableColumn prefWidth="99.9" text="本金差" />
+						<TableColumn prefWidth="99.9" text="利息差" />
+						<TableColumn prefWidth="99.9" text="本息差" />
+					</columns>
+				</TableView>
+				<ChoiceBox fx:id="online_repayment_type" layoutX="418.0"
+					layoutY="28.0" prefWidth="150.0"  >
+					<String fx:value="先息后本" />
+					<String fx:value="等额本息" />
+				</ChoiceBox>
+				<ChoiceBox fx:id="offline_repayment_type" layoutX="418.0"
+					layoutY="73.0" prefWidth="150.0">
+					<String fx:value="先息后本" />
+					<String fx:value="等额等息" />
+					<String fx:value="自定义" />
+				</ChoiceBox>
+				<TextField fx:id="amount" layoutX="107.0" layoutY="28.0"
+					promptText="金额" />
+				<TextField fx:id="period" layoutX="107.0" layoutY="73.0"
+					promptText="期数"/>
+				<TextField fx:id="online_year_irr" layoutX="787.0"
+					layoutY="28.0" promptText="线上年利率" />
+				<TextField fx:id="offline_year_irr" layoutX="787.0"
+					layoutY="73.0" promptText="线下年利率" />
+			</children>
+		</AnchorPane>
+	</children>
+</VBox>

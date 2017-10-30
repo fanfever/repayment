@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea editable="false" prefHeight="364.0" prefWidth="600.0" text="软件版本&#10;还款计算器 V0.0.1.2015.8.21&#10;&#10;作者信息&#10;fanfever&#10;联系方式:&#10;email:fanfeveryahoo@gmail.com&#10;QQ:280502974&#10;&#10;&#10;" />
+      <Label layoutX="483.0" layoutY="371.0" prefHeight="15.0" prefWidth="148.0" text="\@2015 fanfever" />
+   </children>
+</fx:root>
